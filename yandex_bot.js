@@ -19,12 +19,12 @@ let links = document.links;
 
 
 if(btnK !== undefined) {
-   // let qElementArr = document.getElementsByName("q");
+  //let qElementArr = document.getElementsByName("q");
   //let qElement = qElementArr[0];
   //qElement.value = keyword;
   console.log(btnK);
   document.getElementsByName("text")[0].value = keyword;
- setTimeout(clickBtn, 2000);
+  setTimeout(clickBtn, 2000);
 } else {
   for (let i = 0; i < links.length; i++) {
     if (links[i].href.indexOf("napli.ru") !== -1) {
@@ -37,7 +37,7 @@ if(btnK !== undefined) {
 }
 
 function getRandom(min, max) {
-return Math.floor(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min) + min);
 }
 function clickBtn(){
   document.getElementsByClassName("button mini-suggest__button")[0].click();
