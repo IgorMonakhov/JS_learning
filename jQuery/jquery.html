@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Модальное окно</title>
+
+
+	<style>
+		html {
+			background-image: url(background.jpg);
+			background-size: 100%;
+		}
+
+		.container {
+			margin: 20px;
+		}
+
+		.container,
+		a {
+			color: black;
+			font-size: 20px;
+			text-align: justify;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		.popup-fade {
+			display: none;
+		}
+
+		.popup-fade:before {
+			content: '';
+			background: #000;
+			position: fixed;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			opacity: 0.7;
+			z-index: 9999;
+		}
+
+		.popup {
+			position: fixed;
+			top: 20%;
+			left: 50%;
+			padding: 20px;
+			width: 360px;
+			margin-left: -200px;
+			background: #fff;
+			border: 1px solid orange;
+			border-radius: 4px;
+			z-index: 99999;
+			opacity: 1;
+		}
+
+		.popup-close {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="container">
+		<p>
+			<b> Задание: </b>подключить локально библиотеку jQuery к собственной html-странице.
+
+			Создать модальное окно на веб-странице с применением данной библиотеки. Данная библиотека должна
+			обеспечивать плавное
+			открытие/закрытие
+			модального окна.
+
+			По результату выполнения задания должен быть создан корневой каталог, содержащий веб-страницу в расширении
+			.html, а также файлы скрипта JavaScript и файлы библиотеки jQuery. Допускается наличие дополнительных файлов
+			расширений: .css, .jpg и других.
+		</p>
+		<a class="popup-open" href="#"><b>Открыть модальное окно</b></a>
+		<div class="popup-fade">
+			<div class="popup">
+				<a class="popup-close" href="#">X</a>
+				<p>Модальное окно<br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat ipsa culpa
+					est
+					beatae laborum soluta rerum porro, magnam maiores itaque. Eaque amet consequatur, perspiciatis
+					assumenda nam facilis harum fuga illum?</p>
+			</div>
+		</div>
+
+	</div>
+
+
+
+	<script src="./jquery-3.6.0.min.js"></script>
+	<script src="./index.js"></script>
+</body>
+
+</html>
